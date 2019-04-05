@@ -194,22 +194,6 @@ class ContactoController extends Controller
                 }
             }
 
-
-            $imagen = $this->store(request());
-dd($imagen);
-
-            if ($request->file('imagen') && $request->file('imagen')->isValid()) {
-                $request->file('imagen')->move($path, $documentName);
-                $data['document'] = $documentName;
-            }
-        
-        // $document->update($request->all());
-       // $document->update($data);
-
-
-
-
-
         // Commit Transaction
         DB::commit();
 
